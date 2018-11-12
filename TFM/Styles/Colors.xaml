@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TFM.Ressources.Styles">
+
+<!--Define Some Colors&Brushes to use in the Application--> 
+
+    <Color x:Key="ColorMenuBackground">#FF7E6E6E</Color>
+    <SolidColorBrush x:Key="MenuElementBackground" Color="{StaticResource ColorMenuBackground}" Opacity="0.3"/>
+
+    <Color x:Key="ColorMenuElementBorder">#FF610909</Color>
+    <SolidColorBrush x:Key="MenuElementBorder" Color="{StaticResource ColorMenuElementBorder}" />
+
+    <Color x:Key="ColorToggleButtonBorder">#FF828790</Color>
+    <SolidColorBrush x:Key="ToggleButtonborder" Color="{StaticResource ColorToggleButtonBorder}" />
+
+    <ImageBrush x:Key="tfmcardback" ImageSource="Res\Images\tfmcardback.jpg">
+        
+        
+        
+    </ImageBrush>
+
+
+
+
+
+
+
+
+
+
+
+
+</ResourceDictionary>
