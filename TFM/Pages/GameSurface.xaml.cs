@@ -12,21 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TFM.ViewModel;
 
-namespace TFM
+namespace TFM.Pages
 {
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaktionslogik für GameSurface.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GameSurface : Page
     {
-        public MainWindow()
+        public GameSurface()
         {
             InitializeComponent();
-
-            this.DataContext = new WindowViewModel(this);
-
         }
     }
 }

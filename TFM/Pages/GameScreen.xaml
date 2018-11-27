@@ -1,0 +1,355 @@
+﻿<Page x:Class="TFM.Pages.GameScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:TFM.Pages"
+      xmlns:conv="clr-namespace:TFM.Converter"
+      Title="GameScreen">
+
+    <!--Hintergrundbild-->
+    <Page.Background>
+        <ImageBrush ImageSource="..\Res\Images\Mars.jpg"/>
+    </Page.Background>
+
+    <!--TODO Echte FensterGröße bestimmten und auf Elemente runterbrechen-->
+    <Viewbox Stretch="Fill">
+        <DockPanel Width="1600" Height="900">
+
+            <!--Spieler und RessourchenLeiste-->
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Border HorizontalAlignment="Left" Margin="5,5,5,5" Height="33" Background="{StaticResource MenuElementBackground}" Effect="{StaticResource DockPanelShadow}" Padding="5">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontSize="18" FontWeight="Bold" VerticalAlignment="Bottom">Current Player:</TextBlock>
+                        <TextBlock Margin="10,0,0,0" Style="{StaticResource RessourcePanelTextStyle}">Johannes</TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <!--RessourchenLeiste-->
+                <!-- TODO RectangleStyle mit custom Tooltips-->
+                <Border Margin="5,5,5,5" Height="33" Background="{StaticResource MenuElementBackground}" Effect="{StaticResource DockPanelShadow}" Padding="0">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Rectangle Height="25" Width="25" Margin="5,0,0,0">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="..\Res\Icons\Credit100x100.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock Text="15" Style="{StaticResource RessourcePanelTextStyle}"/>
+
+                        <Rectangle Height="25" Width="25">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="..\Res\Icons\Steel100x100.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock Text="+15" Style="{StaticResource RessourcePanelTextStyle}"/>
+
+                        <Rectangle Height="25" Width="25">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="..\Res\Icons\Titan100x100.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock Text="15" Style="{StaticResource RessourcePanelTextStyle}"/>
+
+                        <Rectangle Height="25" Width="25">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="..\Res\Icons\Plant100x100.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock Text="15" Style="{StaticResource RessourcePanelTextStyle}"/>
+
+                        <Rectangle Height="25" Width="25">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="..\Res\Icons\Energy100x100.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock Text="15" Style="{StaticResource RessourcePanelTextStyle}"/>
+
+                        <Rectangle Height="25" Width="25">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="..\Res\Icons\Heat100x100.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock Text="15" Style="{StaticResource RessourcePanelTextStyle}"/>
+
+                    </StackPanel>
+                </Border>
+
+
+                <Border HorizontalAlignment="Left" Margin="5,5,5,5" Height="33" Background="{StaticResource MenuElementBackground}" Effect="{StaticResource DockPanelShadow}" Padding="5">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontSize="18" FontWeight="Bold">PlaceHolder Return,Exit,Minimize</TextBlock>
+
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+
+            <!--Actionliste-->
+
+            <Border Padding="5" Margin="5,0"  DockPanel.Dock="Top" Height="50" Effect="{StaticResource DockPanelShadow}" Background="{StaticResource MenuElementBackground}" VerticalAlignment="Center">
+
+                <StackPanel Orientation="Horizontal">
+                    <Expander Header="Show Standard Projects" ExpandDirection="Right">
+
+                        <StackPanel Orientation="Horizontal">
+
+                            <ToggleButton Style="{StaticResource ToggleButtonStyleRibbon}" Content="Sell patents " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Margin="5,0" Style="{StaticResource ToggleButtonStyleRibbon}" Content="Power plant " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Style="{StaticResource ToggleButtonStyleRibbon}" Content="Asteroid " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Margin="5,0" Style="{StaticResource ToggleButtonStyleRibbon}" Content="Aquifier " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Style="{StaticResource ToggleButtonStyleRibbon}" Content="Greenery " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Margin="5,0" Style="{StaticResource ToggleButtonStyleRibbon}" Content="City " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="Show Standard Projects" ExpandDirection="Right">
+
+                        <StackPanel Orientation="Horizontal">
+
+                            <ToggleButton Style="{StaticResource ToggleButtonStyleRibbon}" Content="Sell patents " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Margin="5,0" Style="{StaticResource ToggleButtonStyleRibbon}" Content="Power plant " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Style="{StaticResource ToggleButtonStyleRibbon}" Content="Asteroid " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Margin="5,0" Style="{StaticResource ToggleButtonStyleRibbon}" Content="Aquifier " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Style="{StaticResource ToggleButtonStyleRibbon}" Content="Greenery " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Margin="5,0" Style="{StaticResource ToggleButtonStyleRibbon}" Content="City " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="Show Standard Projects" ExpandDirection="Right">
+
+                        <StackPanel Orientation="Horizontal">
+
+                            <ToggleButton Style="{StaticResource ToggleButtonStyleRibbon}" Content="Sell patents " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Margin="5,0" Style="{StaticResource ToggleButtonStyleRibbon}" Content="Power plant " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Style="{StaticResource ToggleButtonStyleRibbon}" Content="Asteroid " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Margin="5,0" Style="{StaticResource ToggleButtonStyleRibbon}" Content="Aquifier " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Style="{StaticResource ToggleButtonStyleRibbon}" Content="Greenery " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+                            <ToggleButton Margin="5,0" Style="{StaticResource ToggleButtonStyleRibbon}" Content="City " Template="{StaticResource ToggleButtonRoundedRibbon}" VerticalAlignment="Center" HorizontalAlignment="Left"></ToggleButton>
+
+                        </StackPanel>
+                    </Expander>
+
+                </StackPanel>
+
+            </Border>
+
+            <TextBlock Text="test" DockPanel.Dock="Bottom" Background="Aqua"></TextBlock>
+
+            <Border Margin="5" DockPanel.Dock="Left" Width="650" Effect="{StaticResource DockPanelShadow}" Background="{StaticResource MenuElementBackground}">
+
+            </Border>
+
+            <TextBlock Text="test" DockPanel.Dock="Right" Background="Blue"></TextBlock>
+            <TextBlock Text="test" DockPanel.Dock="Right" ></TextBlock>
+            <Grid DockPanel.Dock="Right">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+
+                <DockPanel Grid.Column="1" Grid.Row="1" Effect="{StaticResource DockPanelShadow}" Background="{StaticResource MenuElementBackground}" >
+                    <!--Visualisierung des ZiehKartenStapels-->
+
+                    <Border DockPanel.Dock="Bottom" Padding="5">
+                        <TextBlock Text="Draw Stack" HorizontalAlignment="Center" FontFamily="{StaticResource LatoBold}" FontSize="16"></TextBlock>
+                    </Border>
+
+                    <Canvas>
+                        <ItemsControl ItemsSource="{Binding Cards}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <Canvas />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <DataTemplate.Resources>
+                                        <!--SetterProperty für Fontsize um Kartenanzahl anzuzeigen-->
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="FontSize" Value="18" />
+                                        </Style>
+                                    </DataTemplate.Resources>
+                                    <Border  MinWidth="100" MinHeight="150"  >
+                                        <Border.Background>
+                                            <DrawingBrush  Stretch="Uniform">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <DrawingGroup.Children>
+                                                            <!--Form der Karten-->
+                                                            <GeometryDrawing Geometry="F1 M 3.77953,0L 147.22,0C 149.308,0 151,1.69218 151,3.77954L 151,223.22C 151,225.307 149.308,226.999 147.22,226.999L 3.77953,226.999C 1.69215,226.999 0,225.307 0,223.22L 0,3.77954C 0,1.69218 1.69215,0 3.77953,0 Z ">
+                                                                <!--JPEG des Kartenrückens-->
+                                                                <GeometryDrawing.Brush>
+                                                                    <ImageBrush ImageSource="C:\Users\Jo\source\repos\Advanced\TFM\TFM\Res\Images\pic2891980.jpg" Stretch="UniformToFill"/>
+                                                                </GeometryDrawing.Brush>
+                                                                <!--Rahmen um die Karte, jede Zweite Karte wird anders gefärbt - erweckt eindruck von gestapelten Karten-->
+                                                                <GeometryDrawing.Pen>
+                                                                    <Pen Thickness="1" LineJoin="Round" Brush="{Binding cardcolorbrush}"/>
+                                                                </GeometryDrawing.Pen>
+                                                            </GeometryDrawing>
+                                                        </DrawingGroup.Children>
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </Border.Background>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemContainerStyle>
+                                <Style>
+                                    <!--Binding um Kartenversatz zu erreichen-->
+                                    <Setter Property="Canvas.Left" Value="{Binding Left}" />
+                                    <Setter Property="Canvas.Top" Value="{Binding Top}" />
+                                    <Setter Property="Panel.ZIndex" Value="{Binding ZIndex}"/>
+                                </Style>
+                            </ItemsControl.ItemContainerStyle>
+                        </ItemsControl>
+                    </Canvas>
+
+
+                </DockPanel>
+
+                <DockPanel Grid.Column="1" Grid.Row="3" Effect="{StaticResource DockPanelShadow}" Background="{StaticResource MenuElementBackground}" >
+                    <!--Visualisierung des ZiehKartenStapels-->
+
+                    <Border DockPanel.Dock="Bottom" Padding="5">
+                        <TextBlock Text="Discard Stack" HorizontalAlignment="Center" FontFamily="{StaticResource LatoBold}" FontSize="16"></TextBlock>
+                    </Border>
+
+
+                    <Canvas>
+                        <ItemsControl ItemsSource="{Binding Cards}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <Canvas />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <DataTemplate.Resources>
+                                        <!--SetterProperty für Fontsize um Kartenanzahl anzuzeigen-->
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="FontSize" Value="18" />
+                                        </Style>
+                                    </DataTemplate.Resources>
+                                    <Border  MinWidth="100" MinHeight="150"  >
+                                        <Border.Background>
+                                            <DrawingBrush  Stretch="Uniform">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <DrawingGroup.Children>
+                                                            <!--Form der Karten-->
+                                                            <GeometryDrawing Geometry="F1 M 3.77953,0L 147.22,0C 149.308,0 151,1.69218 151,3.77954L 151,223.22C 151,225.307 149.308,226.999 147.22,226.999L 3.77953,226.999C 1.69215,226.999 0,225.307 0,223.22L 0,3.77954C 0,1.69218 1.69215,0 3.77953,0 Z ">
+                                                                <!--JPEG des Kartenrückens-->
+                                                                <GeometryDrawing.Brush>
+                                                                    <ImageBrush ImageSource="C:\Users\Jo\source\repos\Advanced\TFM\TFM\Res\Images\pic2891980.jpg" Stretch="UniformToFill"/>
+                                                                </GeometryDrawing.Brush>
+                                                                <!--Rahmen um die Karte, jede Zweite Karte wird anders gefärbt - erweckt eindruck von gestapelten Karten-->
+                                                                <GeometryDrawing.Pen>
+                                                                    <Pen Thickness="1" LineJoin="Round" Brush="{Binding cardcolorbrush}"/>
+                                                                </GeometryDrawing.Pen>
+                                                            </GeometryDrawing>
+                                                        </DrawingGroup.Children>
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </Border.Background>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemContainerStyle>
+                                <Style>
+                                    <!--Binding um Kartenversatz zu erreichen-->
+                                    <Setter Property="Canvas.Left" Value="{Binding Left}" />
+                                    <Setter Property="Canvas.Top" Value="{Binding Top}" />
+                                    <Setter Property="Panel.ZIndex" Value="{Binding ZIndex}"/>
+                                </Style>
+                            </ItemsControl.ItemContainerStyle>
+                        </ItemsControl>
+                    </Canvas>
+
+
+                </DockPanel>
+
+                <Border Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
+                    <Frame x:Name="MyFrame" Content="{Binding GameSurfacePanel, Converter={conv:EnumToPageConverter}}">
+                        <Frame.Style>
+                            <Style TargetType="{x:Type Frame}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Frame}">
+                                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                                                <ContentPresenter DataContext="{TemplateBinding DataContext}"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Frame.Style>
+                    </Frame>
+
+
+
+                </Border>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+            </Grid>
+        </DockPanel>
+    </Viewbox>
+</Page>

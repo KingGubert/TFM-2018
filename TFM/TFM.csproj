@@ -61,21 +61,54 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controls\CanvasItemControl.cs" />
-    <Compile Include="Converter\ApplicationPageValueConverter.cs" />
+    <Compile Include="Controls\TemperatureControl.xaml.cs">
+      <DependentUpon>TemperatureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\EnumToPageConverter.cs" />
     <Compile Include="Converter\BaseValueConverter.cs" />
+    <Compile Include="Dataprovider\DBProv.cs" />
+    <Compile Include="Enums\PlacementBoni.cs" />
+    <Compile Include="Enums\SurfaceID.cs" />
     <Compile Include="Model\Card.cs" />
     <Compile Include="Model\NotifiableObject.cs" />
+    <Compile Include="Model\RangeObservableCollection.cs" />
+    <Compile Include="Model\SurfaceSpot.cs" />
+    <Compile Include="Pages\DrawStack.xaml.cs">
+      <DependentUpon>DrawStack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GameScreen.xaml.cs">
+      <DependentUpon>GameScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GameSurface.xaml.cs">
+      <DependentUpon>GameSurface.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\ApplicationPage.cs" />
+    <Compile Include="Enums\ApplicationPage.cs" />
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
-    <Compile Include="ViewModel\CardStackViewmodel.cs" />
+    <Compile Include="ViewModel\GameScreenViewModel.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
-    <Compile Include="View\Cardstack.xaml.cs">
-      <DependentUpon>Cardstack.xaml</DependentUpon>
-    </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Controls\TemperatureControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DrawStack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\test.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\GameSurface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -83,10 +116,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="View\MainWindowView.xaml.cs">
+      <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\GameScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +133,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\Cardback.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Effects.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,10 +153,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\Fonts.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Cardstack.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,6 +215,17 @@
   <ItemGroup>
     <Resource Include="Res\Images\pic2891980.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Res\Images\Mars.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Icons\Credit100x100.png" />
+    <Resource Include="Res\Icons\Energy100x100.png" />
+    <Resource Include="Res\Icons\Heat100x100.png" />
+    <Resource Include="Res\Icons\Heat25x25.png" />
+    <Resource Include="Res\Icons\Plant100x100.png" />
+    <Resource Include="Res\Icons\Steel100x100.png" />
+    <Resource Include="Res\Icons\Titan100x100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,19 +13,31 @@ namespace TFM.Converter
     /// <summary>
     /// Dient zur verwaltung aller Pages dieser Application
     /// </summary>
-    public class ApplicationPageValueConverter : BaseValueConverter<ApplicationPageValueConverter>
+    public class EnumToPageConverter : BaseValueConverter<EnumToPageConverter>
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
 
-           //Je nach übergebener Applicationpage wird eine neue Instanz dieser Seite zurückgegeben
+            //Je nach übergebener Applicationpage wird eine neue Instanz dieser Seite zurückgegeben
             switch ((ApplicationPage)value)
             {
-
+                //Neue LoginSeite
                 case ApplicationPage.Login:
                     return new LoginPage();
 
-                default:
+                //Neues Spielfenster
+                case ApplicationPage.GameScreen:
+                    return new GameScreen();
+
+                //Drawstack zur Anzeige der noch zu ziehenden Karten
+                case ApplicationPage.DrawStack:
+                    return new DrawStack();
+			
+				case ApplicationPage.test:
+					return new test();
+
+
+				default:
                     //Falls unbekannte Page wird hier angehalten
                     Debugger.Break();
                     return null;

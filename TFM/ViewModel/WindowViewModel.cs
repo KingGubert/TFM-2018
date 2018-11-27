@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using TFM.Dataprovider;
 using TFM.Model;
 
 namespace TFM.ViewModel
@@ -13,7 +16,7 @@ namespace TFM.ViewModel
     /// <summary>
     /// The Viewmodel for the custom styled windows
     /// </summary>
-    public class WindowViewModel : BaseViewModel
+    public class WindowViewModel : NotifiableObject
     {
         #region properties
 
@@ -28,8 +31,7 @@ namespace TFM.ViewModel
         private int m_WindowRadius = 10;
         public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
 
-        //Gegenwärtig Angezeigte Seite im Mainwindow
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+      
 
         /// <summary>
         /// Needed for Dropshadoweffect. Says how far "In" the Window is
@@ -67,14 +69,82 @@ namespace TFM.ViewModel
 
         #endregion
 
-     
+        #region gameproperties
+
+        //Gegenwärtig Angezeigte Seite im Mainwindow
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.GameScreen;
+		public ApplicationPage GameSurfacePanel { get; private set; } = ApplicationPage.test;
 
 
-        #region constructor
 
-        public WindowViewModel(Window window)
+
+
+
+        public ObservableCollection<Card> Cards { get; set; }
+        public string test { get; set; }
+        public double Left { get; set; } = 10;
+        public double Top { get; set; } = 10;
+		static DBProv m_DBProv;
+		private RangeObservableCollection<SurfaceSpot> m_Surface;
+
+		public RangeObservableCollection<SurfaceSpot> Surface
+		{
+			get { return m_Surface ?? (m_Surface = new RangeObservableCollection<SurfaceSpot>()); }
+			set { m_Surface = value; OnPropertyChanged("Surface"); }
+		}
+		public DBProv DBProv
+		{
+			get { return m_DBProv ?? (m_DBProv = new DBProv()); }
+			set { m_DBProv = value; OnPropertyChanged("DBProv"); }
+		}
+
+		#endregion
+
+
+		#region constructor
+
+		public WindowViewModel(Window window)
         {
             m_Window = window;
+
+			m_DBProv = new DBProv();
+
+			
+
+			Surface.AddRange(DBProv.InitializeSurface(SurfaceID.Mars));
+
+			
+
+
+	
+
+			test = "hello";
+
+            Cards = new ObservableCollection<Card>();
+            for (int i = 200 ; i > 1; i--)
+            {
+
+                int leftdistance = 15 - i / 15 ;
+                int topdistance =  65 - i  / 5 ;
+
+                Brush mycolor;
+                if (i % 2 == 1)
+                {
+                    mycolor = Brushes.AntiqueWhite;
+
+                }
+                else
+                {
+                    mycolor = Brushes.Black;
+
+                }
+
+                Cards.Add(new Card(leftdistance, topdistance, mycolor, i));
+            }
+
+
+
+
 
 
             //Listen for Window Resizing

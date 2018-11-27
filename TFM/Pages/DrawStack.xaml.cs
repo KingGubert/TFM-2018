@@ -12,20 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TFM.ViewModel;
 
-namespace TFM.View
+namespace TFM.Pages
 {
     /// <summary>
-    /// Interaktionslogik für Cardstack.xaml
+    /// Interaktionslogik für DrawStack.xaml
     /// </summary>
-    public partial class Cardstack : Window
+    public partial class DrawStack : Page
     {
-        public Cardstack()
+        public DrawStack()
         {
             InitializeComponent();
-
-            DataContext = new CardStackViewmodel();
         }
     }
 }

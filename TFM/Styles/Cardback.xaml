@@ -3,36 +3,20 @@
                     xmlns:local="clr-namespace:TFM.Styles">
 
 
-
-
-    <!--<Style TargetType="Canvas">
-        <Style.Setters>
-            <Setter Property="Canvas."
-            
-            
-        </Style.Setters> 
-        
-        
-        
-        
-    </Style>-->
-
-
     <Canvas x:Key="fuckyou">
-    <ItemsControl  ItemsSource="{Binding MyItems}">
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <Canvas />
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <DataTemplate.Resources>
-                    <Style TargetType="Canvas">
+        <ItemsControl  ItemsSource="{Binding MyItems}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <DataTemplate.Resources>
+                        <Style TargetType="Canvas">
                             <Style.Setters>
                                 <Setter Property="Background">
                                     <Setter.Value>
-
                                         <DrawingBrush  x:Name="Back" Stretch="Uniform">
                                             <DrawingBrush.Drawing>
                                                 <DrawingGroup>
@@ -55,43 +39,21 @@
                                                 </DrawingGroup>
                                             </DrawingBrush.Drawing>
                                         </DrawingBrush>
-
-
-
-
-
-
-
-
-
-
-
                                     </Setter.Value>
-                                    
-                                    
-                                    
-                                    
-                                    
                                 </Setter>
-                                
-                                
-                                
-                                
-                                
                             </Style.Setters>
-                        
-                    </Style>
-                </DataTemplate.Resources>
-                <TextBlock Text="{Binding Text}" />
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-        <ItemsControl.ItemContainerStyle>
-            <Style>
-                <Setter Property="Canvas.Left" Value="{Binding Left}" />
-                <Setter Property="Canvas.Top" Value="{Binding Top}" />
-            </Style>
-        </ItemsControl.ItemContainerStyle>
-    </ItemsControl>
+                        </Style>
+                    </DataTemplate.Resources>
+                    <TextBlock Text="{Binding Text}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Canvas.Left" Value="{Binding Left}" />
+                    <Setter Property="Canvas.Top" Value="{Binding Top}" />
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+        </ItemsControl>
     </Canvas>
 
 

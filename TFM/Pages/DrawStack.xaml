@@ -1,13 +1,12 @@
-﻿<Window x:Class="TFM.View.Cardstack"
+﻿<Page x:Class="TFM.Pages.DrawStack"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:local="clr-namespace:TFM.View"
      
-    Title="Cardstack" Width="800" Height="1200" Background="AntiqueWhite">
+    Title="DrawStack" Width="800" Height="1200" Background="AntiqueWhite">
 
     <!--Visualisierung des ZiehKartenStapels-->
-    
+
     <Canvas>
         <ItemsControl ItemsSource="{Binding Cards}">
             <ItemsControl.ItemsPanel>
@@ -57,4 +56,4 @@
             </ItemsControl.ItemContainerStyle>
         </ItemsControl>
     </Canvas>
-</Window>
+</Page>

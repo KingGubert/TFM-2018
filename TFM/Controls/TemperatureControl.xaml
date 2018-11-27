@@ -1,0 +1,225 @@
+﻿<UserControl x:Class="TFM.Controls.TemperatureControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TFM.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="200">
+    <Grid>
+
+        <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="TempControl" Width="167" Height="600" Canvas.Left="0" Canvas.Top="0">
+            <Path Width="82.3994" Height="599.357" Canvas.Left="59.1387" Canvas.Top="1.64343" Stretch="Fill" StrokeThickness="2" StrokeLineJoin="Round" Stroke="#FFB2ADAA" Data="F1 M 120.438,12.6334L 120.438,540.807C 132.454,546.291 140.538,556.542 140.538,568.282C 140.538,585.799 122.54,600 100.338,600C 78.1367,600 60.1387,585.799 60.1387,568.282C 60.1387,556.542 68.2228,546.291 80.2385,540.807L 80.2385,12.6334C 80.2385,7.11615 85.6088,2.64343 92.2335,2.64343L 108.443,2.64343C 115.068,2.64343 120.438,7.11615 120.438,12.6334 Z ">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="15.4192,1.0826" EndPoint="15.4192,-0.0825961">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="#FFDFE3E7" Offset="0"/>
+                            <GradientStop Color="#FF81BBE5" Offset="0.0790698"/>
+                            <GradientStop Color="#FF2494E3" Offset="0.106977"/>
+                            <GradientStop Color="#FF418FC7" Offset="0.232558"/>
+                            <GradientStop Color="#FF1C669A" Offset="0.32093"/>
+                            <GradientStop Color="#FF3D61AB" Offset="0.378516"/>
+                            <GradientStop Color="#FF5F5CBD" Offset="0.413953"/>
+                            <GradientStop Color="#FF6E48B6" Offset="0.548837"/>
+                            <GradientStop Color="#FF8F37E0" Offset="0.632558"/>
+                            <GradientStop Color="#FFA94178" Offset="0.702326"/>
+                            <GradientStop Color="#FFC44C11" Offset="0.75814"/>
+                            <GradientStop Color="#FFC93C13" Offset="0.795896"/>
+                            <GradientStop Color="#FFCE2C16" Offset="0.865116"/>
+                            <GradientStop Color="#FFD11C11" Offset="0.874776"/>
+                            <GradientStop Color="#FFD50C0C" Offset="0.893023"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.Effect>
+                    <DropShadowEffect BlurRadius="8" ShadowDepth="18.8976" Opacity="0.6" Color="#FF000000" Direction="315"/>
+                </Path.Effect>
+            </Path>
+            <Rectangle Width="1" Height="4.5242" Canvas.Left="166.5" Canvas.Top="194.544" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF7E746D">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="-1.09872,0.500022" EndPoint="1.09865,0.500022">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="#FF88B5D5" Offset="0"/>
+                            <GradientStop Color="#FF2494E3" Offset="0.055814"/>
+                            <GradientStop Color="#FF0B64A4" Offset="0.106977"/>
+                            <GradientStop Color="#FF055893" Offset="0.12093"/>
+                            <GradientStop Color="#FF4A47B9" Offset="0.259136"/>
+                            <GradientStop Color="#FF8F37E0" Offset="0.344186"/>
+                            <GradientStop Color="#FFBB5683" Offset="0.572093"/>
+                            <GradientStop Color="#FFE77526" Offset="0.860465"/>
+                            <GradientStop Color="#FFD3471F" Offset="0.935349"/>
+                            <GradientStop Color="#FFC01919" Offset="0.967442"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock TextAlignment="Left" FontFamily="Georgia" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,79.2202,546.16"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run Text="-30" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,86.3291,483.627"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-26" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,86.5778,452.107"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-24" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,86.4889,511.627"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-28" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,86.7555,426.027"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-22" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,86.4,397.813"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-20" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,87.6444,371.627"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-18" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,87.8222,343.627"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-16" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,87.7333,312.107"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-14" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,87.9111,286.027"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-12" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,87.5555,257.813"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-10" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,91.4667,231.627"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-8" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,91.6444,203.627"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-6" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,91.5556,172.107"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-4" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,91.7333,146.027"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="-2" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,84.8,119.627"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="0" Foreground="#FFFFFFFF"/>
+		<Run FontFamily="Georgia" FontSize="12" Text=" " Foreground="#FFFFFFFF"/>
+		<Run FontFamily="Georgia" FontSize="14" Text="°C" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,89.0667,90.0269"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="+2" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,88.9778,35.6266"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="+6" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,88.8889,60.1065"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run FontFamily="Georgia" FontSize="16" Text="+4" Foreground="#FFFFFFFF"/>
+            </TextBlock>
+            <TextBlock TextAlignment="Left" FontFamily="Georgia" FontWeight="Bold" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform Matrix="1.33333,0,0,1.33333,85.8,6.16011"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+		<Run Text="+8" Foreground="#FFFFC800"/>
+            </TextBlock>
+        </Canvas>
+
+
+
+
+
+    </Grid>
+</UserControl>

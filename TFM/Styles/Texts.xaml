@@ -1,5 +1,22 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:TFM.Styles">
-    
+
+    <!--TextBlockStyle for RessourcenPanel-->
+
+    <Style x:Key="RessourcePanelTextStyle" TargetType="TextBlock">
+        <Style.Setters>
+            <Setter Property="Foreground" Value="LawnGreen"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5,0"/>
+        </Style.Setters>
+    </Style>
+
+
+
+
+
 </ResourceDictionary>

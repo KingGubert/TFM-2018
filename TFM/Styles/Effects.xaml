@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TFM.Styles">
+
+
+
+    <!--Schatteneffekt für HUD Elemente-->
+    <DropShadowEffect x:Key="Shadow" Opacity="0.3" ShadowDepth="10" Direction="300"/>
+    <!--Schatteneffect für das HauptDockpanel des GameScreen-->
+    <DropShadowEffect x:Key="DockPanelShadow" ShadowDepth="4"/>
+
+</ResourceDictionary>

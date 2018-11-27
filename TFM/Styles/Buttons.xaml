@@ -1,5 +1,187 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:TFM.Styles">
+
     
+    <!--Abgerundeter Togglebutton mit border-->
+
+    <ControlTemplate x:Key="ToggleButtonRounded" TargetType="{x:Type ToggleButton}">
+        <Border Background="{StaticResource ButtonGradient}" x:Name="border" Grid.Column="1" Grid.Row="1" MaxWidth="150" MaxHeight="79" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="10">
+            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
+            </Trigger>
+
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!--Abgerundeter Togglebutton mit border für Ribbonbar-->
+
+    <ControlTemplate x:Key="ToggleButtonRoundedRibbon" TargetType="{x:Type ToggleButton}">
+        <Border Background="{StaticResource ButtonGradient}" x:Name="border" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="10">
+            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
+            </Trigger>
+
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!--Abgerundeter Button mit border-->
+
+    <ControlTemplate x:Key="ButtonRounded" TargetType="{x:Type Button}">
+        <Border Background="{StaticResource ButtonGradient}" x:Name="border" Grid.Column="1" Grid.Row="1" MaxWidth="150" MaxHeight="79" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="10">
+            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        </Border>
+
+        <ControlTemplate.Triggers>
+
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
+            </Trigger>
+
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!--ToggleButtonContentandSizeStyle-->
+    <Style x:Key="ToggleButtonStyle" TargetType="{x:Type ToggleButton}">
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="FontFamily" Value="Cooper Black"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Height" Value="80"/>
+    </Style>
+
+    <!--ToggleButtonContentStyle für Ribbonbar im Mainscreen-->
+    <Style x:Key="ToggleButtonStyleRibbon" TargetType="{x:Type ToggleButton}">
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="FontFamily" Value="Cooper Black"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+    </Style>
+
+
+    <!--ButtonContentandSizeStyle for GameLoadList-->
+    <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="FontFamily" Value="Cooper Black"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+
+    </Style>
+
+    <!--Buttonstyle für die Oberflächenslots-->
+    <Style x:Key="SurfaceSpotButton" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border>
+                        <Path x:Name="thisbutton" Width="65.7501" Height="67.9996" Stretch="Fill" StrokeLineJoin="Round" Stroke="#80000000" Fill="#80FF0000" Data="F1 M 938.073,197.902L 938.073,238.102L 970.448,251.502L 1002.82,238.102L 1002.82,197.902L 970.448,184.502L 938.073,197.902 Z ">
+                            <Path.Effect>
+                                <DropShadowEffect BlurRadius="8" ShadowDepth="7.55906" Opacity="1" Color="#FF000000" Direction="315"/>
+                            </Path.Effect>
+                        </Path>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="thisbutton" Value="#FFBEE6FD"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Fill" TargetName="thisbutton" Value="#FFC4E5F6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ResourceDictionary>

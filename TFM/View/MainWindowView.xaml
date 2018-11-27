@@ -1,12 +1,14 @@
-﻿<Window x:Class="TFM.MainWindow"
+﻿<Window x:Class="TFM.MainWindowView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:TFM"
         xmlns:conv="clr-namespace:TFM.Converter"
+        xmlns:vm="clr-namespace:TFM.ViewModel"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"  
         WindowStyle="None"
         Title="Terraforming Mars Version 1.0000" Height="450" Width="800"
+        x:Name="Host"
         >
 
     
@@ -15,7 +17,8 @@
     </WindowChrome.WindowChrome>
 
     <Window.Resources>
-        <Style TargetType="{x:Type local:MainWindow}">
+
+        <Style TargetType="{x:Type local:MainWindowView}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Window}">
@@ -23,7 +26,7 @@
                             <Grid >
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" >
                                     <Border.Background>
-                                        <ImageBrush ImageSource="Res\Images\MainMenüBackGround.jpg"/>
+                                        <ImageBrush ImageSource="..\Res\Images\MainMenüBackGround.jpg"/>
                                     </Border.Background>
 
                                     <!--Depth Effekt at Edge-->
@@ -53,20 +56,35 @@
 
     <DockPanel>
         <!--ToDO Die Menüleiste-->
-        <Border DockPanel.Dock="Top" Background="AliceBlue" >
+        <Border DockPanel.Dock="Top" Background="AliceBlue" Margin="0,10,0,0" >
             <TextBlock Text="Hello"></TextBlock>
         </Border>
 
         <Border Padding="5">
-        <Frame x:Name="MyFrame" Content="{Binding CurrentPage, Converter={conv:ApplicationPageValueConverter}}" Background="Aqua" />
+            <Frame x:Name="MyFrame" Content="{Binding CurrentPage, Converter={conv:EnumToPageConverter}}" Background="Aqua">
+                <Frame.Style>
+                    <Style TargetType="{x:Type Frame}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Frame}">
+                                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter DataContext="{TemplateBinding DataContext}"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Frame.Style>
+            </Frame>
+
+            <!--<Frame x:Name="MyFrame" Content="{Binding DrawStackPage}" Background="Aqua" />-->
         </Border>
 
 
     </DockPanel>
-    
-    
-    
-    
-  
+
+
+
+
 
 </Window>

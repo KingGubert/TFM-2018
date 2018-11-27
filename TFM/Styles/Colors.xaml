@@ -2,26 +2,32 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:TFM.Ressources.Styles">
 
-<!--Define Some Colors&Brushes to use in the Application--> 
+    <!--Define Some Colors&Brushes to use in the Application-->
+    
+    <!--Rotbraun für das Menü-->
+    <Color x:Key="RedBrown">#FF7E6E6E</Color>
+    <SolidColorBrush x:Key="MenuElementBackground" Color="{StaticResource RedBrown}" Opacity="0.3"/>
 
-    <Color x:Key="ColorMenuBackground">#FF7E6E6E</Color>
-    <SolidColorBrush x:Key="MenuElementBackground" Color="{StaticResource ColorMenuBackground}" Opacity="0.3"/>
-
+    <!--Farbe für Border um HUD Elemente-->
     <Color x:Key="ColorMenuElementBorder">#FF610909</Color>
     <SolidColorBrush x:Key="MenuElementBorder" Color="{StaticResource ColorMenuElementBorder}" />
 
+    <!--Farbe für Togglebutton-->
     <Color x:Key="ColorToggleButtonBorder">#FF828790</Color>
     <SolidColorBrush x:Key="ToggleButtonborder" Color="{StaticResource ColorToggleButtonBorder}" />
 
-    <ImageBrush x:Key="tfmcardback" ImageSource="Res\Images\tfmcardback.jpg">
-        
-        
-        
-    </ImageBrush>
+    <!--Kartenrücken einer Terraforming  Mars Karte-->
+    <ImageBrush x:Key="tfmcardback" ImageSource="Res\Images\tfmcardback.jpg"/>
 
+<!--Gradientbrush für Buttons--> 
+    <LinearGradientBrush x:Key="ButtonGradient" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+        <GradientStop Color="Black" Offset="1"/>
+        <GradientStop Color="#7FE4B0B0" Offset="0.692"/>
+    </LinearGradientBrush>
 
-
-
+<!--Icons-->
+    <ImageBrush x:Key="PB_Heat" ImageSource="Res\Icons\Heat25x25.png"/>
+    <ImageBrush x:Key="PBSteel" ImageSource="Res\Icons\Steel100x100.png"/>
 
 
 

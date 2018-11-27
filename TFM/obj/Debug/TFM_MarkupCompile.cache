@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Jo\source\repos\Advanced\TFM\TFM\obj\Debug\
+C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\
 TFM
 none
 false
 DEBUG;TRACE
-C:\Users\Jo\source\repos\Advanced\TFM\TFM\App.xaml
-9-1308073806
+C:\Users\Jo\Documents\source\TFM-2018\TFM\App.xaml
+141437840347
 
-16-89297971
-141032958140
-MainWindow.xaml;Pages\LoginPage.xaml;Styles\Buttons.xaml;Styles\Cardback.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;View\Cardstack.xaml;
+251723226627
+14769702106
+Controls\TemperatureControl.xaml;Pages\DrawStack.xaml;Pages\test.xaml;Pages\GameSurface.xaml;View\MainWindowView.xaml;Pages\GameScreen.xaml;Pages\LoginPage.xaml;Styles\Buttons.xaml;Styles\Cardback.xaml;Styles\Effects.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
 
 False
 

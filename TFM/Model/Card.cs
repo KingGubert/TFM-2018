@@ -14,12 +14,14 @@ namespace TFM.Model
         public double Top { get; set; } = 10;
         public Color cardcolor {get;set;}
         public Brush cardcolorbrush { get; set; }
+        public int ZIndex { get; set; }
 
-        public Card(double leftDistance, double topdistance, Brush ucardcolor)
+        public Card(double leftDistance, double topdistance, Brush ucardcolor, int uZIndex)
         {
             cardname = "test";
             Left = leftDistance;
             Top = topdistance;
+            ZIndex = uZIndex;
             cardcolorbrush = ucardcolor;
                
         }
