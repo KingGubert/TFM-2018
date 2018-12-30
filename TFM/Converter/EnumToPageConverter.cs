@@ -36,6 +36,9 @@ namespace TFM.Converter
 				case ApplicationPage.test:
 					return new test();
 
+				case ApplicationPage.PrimaryGameHost:
+					return new PrimaryGameHost();
+
 
 				default:
                     //Falls unbekannte Page wird hier angehalten

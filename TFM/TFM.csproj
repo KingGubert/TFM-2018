@@ -42,6 +42,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,14 +62,21 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controls\CanvasItemControl.cs" />
+    <Compile Include="Controls\TemperatureControl - Kopieren.xaml.cs">
+      <DependentUpon>OxygenControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TemperatureControl.xaml.cs">
       <DependentUpon>TemperatureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TFRTrack.xaml.cs">
+      <DependentUpon>TFRTrack.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converter\EnumToPageConverter.cs" />
     <Compile Include="Converter\BaseValueConverter.cs" />
     <Compile Include="Dataprovider\DBProv.cs" />
     <Compile Include="Enums\PlacementBoni.cs" />
     <Compile Include="Enums\SurfaceID.cs" />
+    <Compile Include="Model\BaseCard.cs" />
     <Compile Include="Model\Card.cs" />
     <Compile Include="Model\NotifiableObject.cs" />
     <Compile Include="Model\RangeObservableCollection.cs" />
@@ -78,6 +86,9 @@
     </Compile>
     <Compile Include="Pages\GameScreen.xaml.cs">
       <DependentUpon>GameScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrimaryGameHost.xaml.cs">
+      <DependentUpon>PrimaryGameHost.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\test.xaml.cs">
       <DependentUpon>test.xaml</DependentUpon>
@@ -92,11 +103,23 @@
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\GameScreenViewModel.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
+    <Page Include="Controls\OxygenControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\TemperatureControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\TFRTrack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\DrawStack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PrimaryGameHost.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -226,6 +249,10 @@
     <Resource Include="Res\Icons\Plant100x100.png" />
     <Resource Include="Res\Icons\Steel100x100.png" />
     <Resource Include="Res\Icons\Titan100x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Icons\ScoreTrackOrange.png" />
+    <Resource Include="Res\Icons\ScoreTrackYellow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

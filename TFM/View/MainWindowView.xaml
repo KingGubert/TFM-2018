@@ -54,6 +54,7 @@
 
     </Window.Resources>
 
+   
     <DockPanel>
         <!--ToDO Die Menüleiste-->
         <Border DockPanel.Dock="Top" Background="AliceBlue" Margin="0,10,0,0" >

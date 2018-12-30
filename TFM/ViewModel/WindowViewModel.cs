@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using TFM.Controls;
 using TFM.Dataprovider;
 using TFM.Model;
 
@@ -74,13 +75,14 @@ namespace TFM.ViewModel
         //Gegenwärtig Angezeigte Seite im Mainwindow
         public ApplicationPage CurrentPage { get; set; } = ApplicationPage.GameScreen;
 		public ApplicationPage GameSurfacePanel { get; private set; } = ApplicationPage.test;
+		public TemperatureControl TemperatureGauge { get; set; } = new TemperatureControl();
+		public OxygenControl OxygenGauge { get; set; } = new OxygenControl();
+		public TFRTrack TFRTrack { get; set; } = new TFRTrack();
+		public ObservableCollection<int> Tracktest { get; set; } = new ObservableCollection<int>();
 
 
-
-
-
-
-        public ObservableCollection<Card> Cards { get; set; }
+		public ObservableCollection<Card> DiscardedCards { get; set; }
+		public ObservableCollection<Card> Cards { get; set; }
         public string test { get; set; }
         public double Left { get; set; } = 10;
         public double Top { get; set; } = 10;
@@ -109,14 +111,14 @@ namespace TFM.ViewModel
 
 			m_DBProv = new DBProv();
 
-			
+			Tracktest.Add(1);
+			Tracktest.Add(2);
 
 			Surface.AddRange(DBProv.InitializeSurface(SurfaceID.Mars));
 
-			
 
 
-	
+
 
 			test = "hello";
 

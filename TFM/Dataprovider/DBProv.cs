@@ -166,13 +166,21 @@ namespace TFM.Dataprovider
 						tempCanvasLeft = 248;
 						tempCanvasTop = 0 + 61*8;
 					}
-					if (tempSpotCounter >= 61)
+					if (tempSpotCounter == 61)
 					{
-						tempCanvasLeft = 120;
-						tempCanvasTop = -30;
+						tempCanvasLeft = 0;
+						tempCanvasTop = -100;
 					}
-
-
+					if (tempSpotCounter == 62)
+					{
+						tempCanvasLeft = 90;
+						tempCanvasTop = -160;
+					}
+					if (tempSpotCounter >= 63)
+					{
+						tempCanvasLeft = 0;
+						tempCanvasTop = 0;
+					}
 
 					//Spot zur Surface hinzufügen
 					CompleteSurface.Add(tempSpot);

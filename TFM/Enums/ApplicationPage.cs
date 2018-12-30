@@ -17,5 +17,6 @@ namespace TFM.ViewModel
         GameScreen = 2, // Where Maingame happens
         DrawStack = 3,   // Drawstack
 			test = 4,
+			PrimaryGameHost = 5, //
     }
 }

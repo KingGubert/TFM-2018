@@ -8,12 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/icons/credit100x100.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/icons/energy100x100.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/icons/heat100x100.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/icons/heat25x25.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/icons/plant100x100.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/icons/steel100x100.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/icons/titan100x100.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/icons/scoretrackorange.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/icons/scoretrackyellow.png")]
 
 

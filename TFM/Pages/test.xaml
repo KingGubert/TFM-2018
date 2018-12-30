@@ -22,20 +22,22 @@
                         </Style>
                     </DataTemplate.Resources>
                     <Canvas>
-                        <Canvas Canvas.Top="90" Canvas.Left="-110">
+                        <!--Wie weit nach rechts verschoben?-->
+                        <Canvas Canvas.Top="90" Canvas.Left="-90">
                             <Path Width="76" Height="76" Stretch="Fill" StrokeLineJoin="Round" Stroke="#80000000" Fill="Transparent" Data="F1 M 1047.07,305.307L 1047.07,258.604L 1009.02,243.037L 970.962,258.604L 970.962,305.307L 1009.02,320.874L 1047.07,305.307 Z "/>
                             <Path Width="72" Height="72" Canvas.Left="2" Canvas.Top="2" Stretch="Fill" StrokeLineJoin="Round" Stroke="#80000000" Fill="Transparent" Data="F1 M 1044.53,304.25L 1044.53,259.727L 1009.02,244.886L 973.497,259.727L 973.497,304.25L 1009.02,319.091L 1044.53,304.25 Z "/>
                             <Path Width="11" Height="11" Canvas.Left="32.5" Canvas.Top="34" Stretch="Fill" StrokeLineJoin="Round" Stroke="#80000000" Fill="Transparent" Data="F1 M 967.475,213.22L 973.197,213.22C 974.301,213.22 975.197,214.115 975.197,215.22L 975.197,221.22C 975.197,222.324 974.301,223.22 973.197,223.22L 967.475,223.22C 966.37,223.22 965.475,222.324 965.475,221.22L 965.475,215.22C 965.475,214.115 966.37,213.22 967.475,213.22 Z "/>
                             <!--80A2C8E2-->
 
-                            <TextBlock Canvas.Left="10" Canvas.Top="14"  FontFamily="{StaticResource LatoBold}" FontSize="8" HorizontalAlignment="Center">
+                            <!--Beschriftung der Sonderplätze-->
+                            <!--<TextBlock Canvas.Left="15" Canvas.Top="18"  FontFamily="{StaticResource LatoBold}" FontSize="8" HorizontalAlignment="Center">
                                 <TextBlock.RenderTransform>
                                     <TransformGroup>
                                         <RotateTransform Angle="30"/>
                                     </TransformGroup>
-                                </TextBlock.RenderTransform>
-		                        <Run Text="{Binding SpotName}" Foreground="#FF000000"/>
-                            </TextBlock>
+                                </TextBlock.RenderTransform>-->
+		                        <TextBlock TextAlignment="Center" FontSize="12" FontWeight="Bold" Width="60" Canvas.Left="8" Canvas.Top="25" TextWrapping="Wrap" Text="{Binding SpotName}" Foreground="#FF000000"/>
+                            <!--</TextBlock>-->
 
                             <Button Canvas.Left="5" Canvas.Top="4">
                                 <Button.Style>

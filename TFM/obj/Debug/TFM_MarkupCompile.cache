@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Jo\Documents\source\TFM-2018\TFM\App.xaml
-141437840347
+17-432229876
 
-251723226627
-14769702106
-Controls\TemperatureControl.xaml;Pages\DrawStack.xaml;Pages\test.xaml;Pages\GameSurface.xaml;View\MainWindowView.xaml;Pages\GameScreen.xaml;Pages\LoginPage.xaml;Styles\Buttons.xaml;Styles\Cardback.xaml;Styles\Effects.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
+29-149219916
+15-1975584255
+Controls\OxygenControl.xaml;Controls\TemperatureControl.xaml;Controls\TFRTrack.xaml;Pages\DrawStack.xaml;Pages\PrimaryGameHost.xaml;Pages\test.xaml;Pages\GameSurface.xaml;View\MainWindowView.xaml;Pages\GameScreen.xaml;Pages\LoginPage.xaml;Styles\Buttons.xaml;Styles\Cardback.xaml;Styles\Effects.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
 
 False
 

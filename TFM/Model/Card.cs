@@ -7,16 +7,16 @@ using System.Windows.Media;
 
 namespace TFM.Model
 {
-    public class Card : NotifiableObject
+    public class Card :BaseCard
     {
-        public string cardname { get; set; }
-        public double Left { get; set; } = 10;
-        public double Top { get; set; } = 10;
-        public Color cardcolor {get;set;}
-        public Brush cardcolorbrush { get; set; }
-        public int ZIndex { get; set; }
+		public string cardname { get; set; }
+		//public double Left { get; set; } = 10;
+		//public double Top { get; set; } = 10;
+		//public Color cardcolor {get;set;}
+		//public Brush cardcolorbrush { get; set; }
+		//public int ZIndex { get; set; }
 
-        public Card(double leftDistance, double topdistance, Brush ucardcolor, int uZIndex)
+		public Card(double leftDistance, double topdistance, Brush ucardcolor, int uZIndex)
         {
             cardname = "test";
             Left = leftDistance;
@@ -26,5 +26,14 @@ namespace TFM.Model
                
         }
 
-    }
+		public override void DiscardCard()
+		{
+			throw new NotImplementedException();
+		}
+
+		public override void PlayCard()
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

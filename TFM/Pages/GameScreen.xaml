@@ -133,7 +133,7 @@
 
             <TextBlock Text="test" DockPanel.Dock="Bottom" Background="Aqua"></TextBlock>
 
-            <Border Margin="5" DockPanel.Dock="Left" Width="650" Effect="{StaticResource DockPanelShadow}" Background="{StaticResource MenuElementBackground}">
+            <Border Margin="5" DockPanel.Dock="Left" Width="650" Effect="{StaticResource DockPanelShadow}" Background="{DynamicResource DrawingBrush1}">
 
             </Border>
 
@@ -276,26 +276,27 @@
 
                 </DockPanel>
 
-                <Border Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
-                    <Frame x:Name="MyFrame" Content="{Binding GameSurfacePanel, Converter={conv:EnumToPageConverter}}">
-                        <Frame.Style>
-                            <Style TargetType="{x:Type Frame}">
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type Frame}">
-                                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
-                                                <ContentPresenter DataContext="{TemplateBinding DataContext}"/>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </Frame.Style>
-                    </Frame>
+                <!--<Border Background="Azure" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Opacity="0.5">-->
+
+                    <Border Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
+                        <Frame x:Name="MyFrame" Content="{Binding GameSurfacePanel, Converter={conv:EnumToPageConverter}}">
+                            <Frame.Style>
+                                <Style TargetType="{x:Type Frame}">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Frame}">
+                                                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                                                    <ContentPresenter DataContext="{TemplateBinding DataContext}"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Frame.Style>
+                        </Frame>
 
 
-
-                </Border>
+                    </Border>
                 
                 
                 

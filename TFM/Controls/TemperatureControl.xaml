@@ -1,14 +1,42 @@
 ﻿<UserControl x:Class="TFM.Controls.TemperatureControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:TFM.Controls"
-             mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="200">
-    <Grid>
+          >
 
-        <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="TempControl" Width="167" Height="600" Canvas.Left="0" Canvas.Top="0">
+    <Grid Height="700" Width="150">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="117*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Grafik-->
+        <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Layer_1_40" Canvas.Left="0" Canvas.Top="0" Grid.ColumnSpan="2" Margin="0,0,0,8" Grid.RowSpan="20">
             <Path Width="82.3994" Height="599.357" Canvas.Left="59.1387" Canvas.Top="1.64343" Stretch="Fill" StrokeThickness="2" StrokeLineJoin="Round" Stroke="#FFB2ADAA" Data="F1 M 120.438,12.6334L 120.438,540.807C 132.454,546.291 140.538,556.542 140.538,568.282C 140.538,585.799 122.54,600 100.338,600C 78.1367,600 60.1387,585.799 60.1387,568.282C 60.1387,556.542 68.2228,546.291 80.2385,540.807L 80.2385,12.6334C 80.2385,7.11615 85.6088,2.64343 92.2335,2.64343L 108.443,2.64343C 115.068,2.64343 120.438,7.11615 120.438,12.6334 Z ">
                 <Path.Fill>
                     <LinearGradientBrush StartPoint="15.4192,1.0826" EndPoint="15.4192,-0.0825961">
@@ -35,25 +63,7 @@
                     <DropShadowEffect BlurRadius="8" ShadowDepth="18.8976" Opacity="0.6" Color="#FF000000" Direction="315"/>
                 </Path.Effect>
             </Path>
-            <Rectangle Width="1" Height="4.5242" Canvas.Left="166.5" Canvas.Top="194.544" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF7E746D">
-                <Rectangle.Fill>
-                    <LinearGradientBrush StartPoint="-1.09872,0.500022" EndPoint="1.09865,0.500022">
-                        <LinearGradientBrush.GradientStops>
-                            <GradientStop Color="#FF88B5D5" Offset="0"/>
-                            <GradientStop Color="#FF2494E3" Offset="0.055814"/>
-                            <GradientStop Color="#FF0B64A4" Offset="0.106977"/>
-                            <GradientStop Color="#FF055893" Offset="0.12093"/>
-                            <GradientStop Color="#FF4A47B9" Offset="0.259136"/>
-                            <GradientStop Color="#FF8F37E0" Offset="0.344186"/>
-                            <GradientStop Color="#FFBB5683" Offset="0.572093"/>
-                            <GradientStop Color="#FFE77526" Offset="0.860465"/>
-                            <GradientStop Color="#FFD3471F" Offset="0.935349"/>
-                            <GradientStop Color="#FFC01919" Offset="0.967442"/>
-                        </LinearGradientBrush.GradientStops>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-            <TextBlock TextAlignment="Left" FontFamily="Georgia" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" FontFamily="Georgia" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,79.2202,546.16"/>
@@ -61,7 +71,7 @@
                 </TextBlock.RenderTransform>
 		<Run Text="-30" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,86.3291,483.627"/>
@@ -69,7 +79,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-26" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,86.5778,452.107"/>
@@ -77,7 +87,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-24" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,86.4889,511.627"/>
@@ -85,7 +95,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-28" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,86.7555,426.027"/>
@@ -93,15 +103,18 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-22" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Width="24" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
-                        <MatrixTransform Matrix="1.33333,0,0,1.33333,86.4,397.813"/>
+                        <ScaleTransform ScaleY="1.333" ScaleX="1.333"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="86.4" Y="397.813"/>
                     </TransformGroup>
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-20" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,87.6444,371.627"/>
@@ -109,7 +122,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-18" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,87.8222,343.627"/>
@@ -117,7 +130,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-16" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,87.7333,312.107"/>
@@ -125,7 +138,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-14" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,87.9111,286.027"/>
@@ -133,7 +146,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-12" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,87.5555,257.813"/>
@@ -141,7 +154,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-10" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,91.4667,231.627"/>
@@ -149,7 +162,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-8" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,91.6444,203.627"/>
@@ -157,7 +170,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-6" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,91.5556,172.107"/>
@@ -165,7 +178,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="-4" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,91.7333,146.027"/>
@@ -179,11 +192,10 @@
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,84.8,119.627"/>
                     </TransformGroup>
                 </TextBlock.RenderTransform>
-		<Run FontFamily="Georgia" FontSize="16" Text="0" Foreground="#FFFFFFFF"/>
-		<Run FontFamily="Georgia" FontSize="12" Text=" " Foreground="#FFFFFFFF"/>
-		<Run FontFamily="Georgia" FontSize="14" Text="°C" Foreground="#FFFFFFFF"/>
+		<Run FontFamily="Georgia" FontSize="14" Text="0" Foreground="#FFFFFFFF"/>
+		<Run FontFamily="Georgia" FontSize="10" Text="°C" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,89.0667,90.0269"/>
@@ -191,7 +203,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="+2" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,88.9778,35.6266"/>
@@ -199,7 +211,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="+6" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,88.8889,60.1065"/>
@@ -207,7 +219,7 @@
                 </TextBlock.RenderTransform>
 		<Run FontFamily="Georgia" FontSize="16" Text="+4" Foreground="#FFFFFFFF"/>
             </TextBlock>
-            <TextBlock TextAlignment="Left" FontFamily="Georgia" FontWeight="Bold" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock TextAlignment="Left" FontFamily="Georgia" FontWeight="Bold" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="-3">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <MatrixTransform Matrix="1.33333,0,0,1.33333,85.8,6.16011"/>
@@ -215,10 +227,104 @@
                 </TextBlock.RenderTransform>
 		<Run Text="+8" Foreground="#FFFFC800"/>
             </TextBlock>
-        </Canvas>
+            <Path Width="62.3969" Height="71.9999" Canvas.Left="-1.83964e-005" Canvas.Top="97.3748" Stretch="Fill" Fill="#FF2852C7" Data="F1 M 0.0430611,151.412L 31.2415,169.375L 62.3968,151.337L 62.3537,115.337L 31.1553,97.3748L -1.83964e-005,115.412L 0.0430611,151.412 Z "/>
+            <Rectangle Width="17" Height="3.82419" Canvas.Left="62.3626" Canvas.Top="131.452" Stretch="Fill" Fill="#FFC4C0BE"/>
+            <Path Width="58.9303" Height="67.9999" Canvas.Left="1.73486" Canvas.Top="99.3916" Stretch="Fill" Data="F1 M 1.77555,150.427L 31.2407,167.391L 60.6652,150.356L 60.6245,116.356L 31.1593,99.3916L 1.73486,116.427L 1.77555,150.427 Z ">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0.499999,0.933314" EndPoint="0.5,0.0666896">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="#FFDFE3E7" Offset="0"/>
+                            <GradientStop Color="#FFB2C6D7" Offset="0.0302866"/>
+                            <GradientStop Color="#FF85A9C7" Offset="0.465116"/>
+                            <GradientStop Color="#FF2473B6" Offset="1"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.Effect>
+                    <DropShadowEffect BlurRadius="8" ShadowDepth="3.77953" Opacity="0.6" Color="#FF000000" Direction="315"/>
+                </Path.Effect>
+            </Path>
+            <Path Width="58.8946" Height="31.3736" Canvas.Left="1.75811" Canvas.Top="136.023" Stretch="Fill" Data="F1 M 1.75811,150.432L 1.78813,142.625L 1.78813,142.105C 2.90272,139.355 3.96939,139.367 5.68293,137.799C 7.39647,136.232 9.70897,135.846 12.1413,136.091C 14.5736,136.336 17.1256,137.211 20.1777,138.055C 23.2298,138.898 26.7819,139.711 30.86,139.851C 34.9381,139.992 39.5423,139.461 44.5736,140.138C 49.6048,140.815 55.0631,142.7 60.5215,144.586L 60.6161,144.881L 60.6412,144.881L 60.6413,144.959L 60.6527,144.995L 60.6413,144.995L 60.6477,150.362L 31.2232,167.397L 1.75811,150.432 Z ">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0.499848,1.43606" EndPoint="0.499848,-0.441707">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="#9ADFE3E7" Offset="0.0431034"/>
+                            <GradientStop Color="#9A8179DC" Offset="0.0678027"/>
+                            <GradientStop Color="#9A230FD2" Offset="0.422414"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Width="16.4695" Height="30.4575" Canvas.Left="22.1458" Canvas.Top="108.957" Stretch="Fill" StrokeThickness="0.1" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 34.8357,119.412C 36.1951,123.24 36.6482,124.24 37.1951,125.662C 37.9764,127.287 39.1647,130.662 38.2107,133.537C 37.2567,136.412 33.9407,138.77 31.1733,139.293L 30.3504,139.364L 30.3504,139.359L 29.5377,139.288C 26.7703,138.765 23.4772,136.099 22.5232,133.224C 21.5692,130.349 22.9451,127.417 23.5337,125.672C 24.0857,124.078 24.3982,123.183 25.7837,119.526C 26.9087,116.026 28.6958,109.333 30.2987,109.028C 30.3442,109.014 30.294,109.007 30.3462,109.007C 30.4023,109.007 30.4557,109.016 30.504,109.031C 32.1108,109.315 33.7003,115.818 34.8357,119.412 Z ">
+                <Path.Fill>
+                    <RadialGradientBrush RadiusX="0.927255" RadiusY="0.499999" Center="0.499173,0.499999" GradientOrigin="0.499173,0.499999">
+                        <RadialGradientBrush.GradientStops>
+                            <GradientStop Color="#FFDFE3E7" Offset="0"/>
+                            <GradientStop Color="#FF9AAEF3" Offset="0.639434"/>
+                            <GradientStop Color="#FF557AFF" Offset="0.865116"/>
+                            <GradientStop Color="#FF3E60DC" Offset="0.973023"/>
+                            <GradientStop Color="#FF2746B9" Offset="1"/>
+                        </RadialGradientBrush.GradientStops>
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup/>
+                        </RadialGradientBrush.RelativeTransform>
+                    </RadialGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Width="16.3391" Height="30.078" Canvas.Left="22.2324" Canvas.Top="109.198" Stretch="Fill" Data="F1 M 31.7187,110.946C 31.7395,110.529 32.052,111.126 32.5242,112.39C 32.9964,113.654 33.6284,115.585 34.1353,117.178L 35.5242,121.421L 37.0659,125.397L 37.9201,127.657L 37.9895,127.904L 38.0535,128.17L 38.3888,129.46L 38.4307,129.805C 38.5339,130.426 38.6047,131.099 38.5555,131.838C 38.4999,132.671 38.2916,133.588 37.8263,134.498C 37.361,135.407 36.6388,136.31 35.4409,137.231C 34.243,138.152 32.5694,139.091 30.9513,139.251C 29.3333,139.411 27.7708,138.791 26.4452,137.908C 25.1197,137.026 24.0312,135.88 23.3333,134.809C 22.6353,133.739 22.328,132.744 22.25,131.803C 22.1719,130.862 22.3744,129.378 22.45,128.886C 22.5154,128.46 22.2339,129.718 22.7152,129.511C 22.2495,129.547 22.5658,128.511 23.0636,127.13L 25.7179,119.692C 26.6041,117.119 28.3506,111.162 29.184,110.073C 30.0173,108.985 30.0121,109.334 30.5902,109.198L 31.0902,109.448C 31.3119,109.165 32.7482,112.106 33.0902,114.667C 33.1597,114.789 31.9496,112.827 32.0258,113.032C 31.8297,112.009 31.7042,111.234 31.7187,110.946 Z ">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="-0.00370039,0.524358" EndPoint="1.00203,0.524358">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="#B383AED9" Offset="0"/>
+                            <GradientStop Color="#B378A4DA" Offset="0.0924419"/>
+                            <GradientStop Color="#B36E9ADC" Offset="0.246512"/>
+                            <GradientStop Color="#B33B7BFF" Offset="0.376744"/>
+                            <GradientStop Color="#B3326AF8" Offset="0.437165"/>
+                            <GradientStop Color="#B32959F1" Offset="0.665116"/>
+                            <GradientStop Color="#B30F3FEE" Offset="0.865116"/>
+                            <GradientStop Color="#B30C2FAF" Offset="0.95814"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Rectangle Width="17" Height="3.82422" Canvas.Left="62.196" Canvas.Top="410.091" Stretch="Fill" Fill="#FFC4C0BE"/>
+            <Rectangle Width="17" Height="3.82416" Canvas.Left="62.0687" Canvas.Top="464.458" Stretch="Fill" Fill="#FFC4C0BE"/>
+            <Path Width="39" Height="39" Canvas.Left="23.1854" Canvas.Top="446.745" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FF541A1A" Data="M 25.6854,447.245L 59.6854,447.245C 60.79,447.245 61.6854,448.141 61.6854,449.245L 61.6854,483.245C 61.6854,484.35 60.79,485.245 59.6854,485.245L 25.6854,485.245C 24.5808,485.245 23.6854,484.35 23.6854,483.245L 23.6854,449.245C 23.6854,448.141 24.5808,447.245 25.6854,447.245 Z ">
+                <Path.Effect>
+                    <DropShadowEffect BlurRadius="8" ShadowDepth="3.77953" Opacity="0.6" Color="#FF000000" Direction="315"/>
+                </Path.Effect>
+            </Path>
+            <Path Width="29.0005" Height="29" Canvas.Left="28.1687" Canvas.Top="451.703" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE5B27" Data="M 30.6687,452.203L 54.6692,452.203C 55.7738,452.203 56.6692,453.099 56.6692,454.203L 56.6692,478.203C 56.6692,479.308 55.7738,480.203 54.6692,480.203L 30.6687,480.203C 29.5642,480.203 28.6687,479.308 28.6687,478.203L 28.6687,454.203C 28.6687,453.099 29.5642,452.203 30.6687,452.203 Z "/>
+            <Path Width="27.3745" Height="15.1536" Canvas.Left="29.0183" Canvas.Top="464.681" Stretch="Fill" Fill="#FFDA2727" Data="F1 M 37.152,467.067L 49.1658,467.067C 50.4928,467.067 56.3736,463.595 56.3736,465.162L 56.374,476.998C 56.374,478.565 56.6245,479.835 55.2976,479.835L 30.1136,479.835C 28.7866,479.835 29.0371,478.565 29.0371,476.998L 29.0367,465.081C 29.0367,463.513 35.825,467.067 37.152,467.067 Z "/>
+            <Path Width="22.8624" Height="9.64868" Canvas.Left="29.3901" Canvas.Top="453.609" Stretch="Fill" Fill="#80EE5B27" Data="F1 M 40.7986,453.61C 47.1119,453.58 52.2399,455.716 52.2525,458.38C 52.265,461.044 47.1572,463.228 40.844,463.258C 34.5307,463.287 29.4026,461.152 29.3901,458.487C 29.3775,455.823 34.4853,453.639 40.7986,453.61 Z ">
+                <Path.Effect>
+                    <DropShadowEffect BlurRadius="6" ShadowDepth="11.3386" Opacity="0.599998" Color="#FF000000" Direction="290"/>
+                </Path.Effect>
+            </Path>
+            <Path Width="7.96915" Height="17.666" Canvas.Left="38.7871" Canvas.Top="457.03" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFFF0000" Fill="#FFFFFF00" Data="F1 M 46.2562,467.608L 42.8262,464.445L 43.3826,457.53L 39.2871,464.118L 42.717,467.28L 42.1607,474.196L 46.2562,467.608 Z "/>
+            <Path Width="7.96915" Height="17.666" Canvas.Left="33.5324" Canvas.Top="457.143" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFFF0000" Fill="#FFFFFF00" Data="F1 M 41.0016,467.721L 37.5716,464.558L 38.128,457.643L 34.0324,464.231L 37.4624,467.393L 36.9061,474.309L 41.0016,467.721 Z "/>
+            <Path Width="7.96915" Height="17.666" Canvas.Left="44.0417" Canvas.Top="456.917" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFFF0000" Fill="#FFFFFF00" Data="F1 M 51.5108,467.495L 48.0809,464.332L 48.6372,457.417L 44.5417,464.005L 47.9717,467.167L 47.4153,474.083L 51.5108,467.495 Z "/>
+            <Path Width="39" Height="39" Canvas.Left="23.19" Canvas.Top="392.245" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FF541A1A" Data="M 25.69,392.745L 59.69,392.745C 60.7946,392.745 61.69,393.641 61.69,394.745L 61.69,428.745C 61.69,429.85 60.7946,430.745 59.69,430.745L 25.69,430.745C 24.5854,430.745 23.69,429.85 23.69,428.745L 23.69,394.745C 23.69,393.641 24.5854,392.745 25.69,392.745 Z ">
+                <Path.Effect>
+                    <DropShadowEffect BlurRadius="8" ShadowDepth="3.77953" Opacity="0.6" Color="#FF000000" Direction="315"/>
+                </Path.Effect>
+            </Path>
+            <Path Width="29.0009" Height="28.9999" Canvas.Left="28.1733" Canvas.Top="397.203" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FFEE5B27" Data="M 30.6733,397.703L 54.6742,397.703C 55.7788,397.703 56.6742,398.599 56.6742,399.703L 56.6742,423.703C 56.6742,424.808 55.7788,425.703 54.6742,425.703L 30.6733,425.703C 29.5688,425.703 28.6733,424.808 28.6733,423.703L 28.6733,399.703C 28.6733,398.599 29.5688,397.703 30.6733,397.703 Z "/>
+            <Path Width="27.3745" Height="15.1536" Canvas.Left="29.0229" Canvas.Top="410.181" Stretch="Fill" Fill="#FFDA2727" Data="F1 M 37.1566,412.567L 49.1704,412.567C 50.4974,412.567 56.3782,409.095 56.3782,410.662L 56.3786,422.498C 56.3786,424.065 56.6292,425.335 55.3022,425.335L 30.1182,425.335C 28.7912,425.335 29.0418,424.065 29.0418,422.498L 29.0414,410.581C 29.0414,409.013 35.8296,412.567 37.1566,412.567 Z "/>
+            <Path Width="22.8624" Height="9.64868" Canvas.Left="29.3947" Canvas.Top="399.109" Stretch="Fill" Fill="#80EE5B27" Data="F1 M 40.8032,399.11C 47.1165,399.08 52.2446,401.216 52.2571,403.88C 52.2696,406.544 47.1618,408.728 40.8486,408.758C 34.5353,408.787 29.4072,406.652 29.3947,403.987C 29.3822,401.323 34.4899,399.139 40.8032,399.11 Z ">
+                <Path.Effect>
+                    <DropShadowEffect BlurRadius="6" ShadowDepth="11.3386" Opacity="0.599998" Color="#FF000000" Direction="290"/>
+                </Path.Effect>
+            </Path>
+            <Path Width="7.96915" Height="17.666" Canvas.Left="38.7917" Canvas.Top="402.53" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFFF0000" Fill="#FFFFFF00" Data="F1 M 46.2608,413.108L 42.8308,409.945L 43.3872,403.03L 39.2917,409.618L 42.7216,412.78L 42.1653,419.696L 46.2608,413.108 Z "/>
+            <Path Width="7.96915" Height="17.666" Canvas.Left="33.5371" Canvas.Top="402.643" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFFF0000" Fill="#FFFFFF00" Data="F1 M 41.0062,413.221L 37.5762,410.058L 38.1326,403.143L 34.0371,409.731L 37.467,412.893L 36.9107,419.809L 41.0062,413.221 Z "/>
+            <Path Width="7.96915" Height="17.666" Canvas.Left="44.0463" Canvas.Top="402.417" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFFF0000" Fill="#FFFFFF00" Data="F1 M 51.5154,412.995L 48.0855,409.832L 48.6418,402.917L 44.5463,409.505L 47.9763,412.667L 47.4199,419.583L 51.5154,412.995 Z "/>
+        </Canvas>
 
-
-
+        <!--Der Marker-->
+        <Border Padding="5" Grid.Column="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}},Path=MarkerGridPositionColumn}" Grid.Row="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=MarkerGridPositionRow}">
+            <Rectangle  Fill="White" />
+        </Border>
 
 
     </Grid>

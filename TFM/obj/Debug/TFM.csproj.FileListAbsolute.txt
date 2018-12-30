@@ -64,3 +64,9 @@ C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\Pages\test.baml
 C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\TFM.csprojResolveAssemblyReference.cache
 C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\Controls\TemperatureControl.g.cs
 C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\Controls\TemperatureControl.baml
+C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\Controls\OxygenControl.g.cs
+C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\Controls\OxygenControl.baml
+C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\Controls\TFRTrack.g.cs
+C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\Pages\PrimaryGameHost.g.cs
+C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\Controls\TFRTrack.baml
+C:\Users\Jo\Documents\source\TFM-2018\TFM\obj\Debug\Pages\PrimaryGameHost.baml
